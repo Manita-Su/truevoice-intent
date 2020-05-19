@@ -23,9 +23,7 @@ The `destination` field is where the customers will be routed to with a certain 
 
 We provide 3 benchmarks for the 7-class multi-class classification of destination column in truevoice-intnet dataset: [fastText](fasttext.cc), LinearSVC and [ULMFit](https://github.com/cstorm125/thai2fit). In the transfer learning cases, we first finetune the embeddings using all data. The test set contains 20% of all data split by TrueVoice. The rest is split into 85/15 train-validation split randomly. Performance metrics are micro-averaged accuracy and F1 score. For more details, see `classification.ipynb`.
 
-| model     | accuracy | micro-F1 |
-|-----------|----------|----------|
-| fastText  | 0.384116 | 0.384116 |
-| LinearSVC-Tfidf | 0.307876 | 0.327565 |
-| **[LinearSVC-CountVectorizer](https://drive.google.com/drive/folders/1twZ2euWR6QE5LNzVqmftKSA0tQCNbZnl?fbclid=IwAR1XeRwF0Pk9LtW9p9LaK5az7ZEYRtuApJxKwsiggL-XA0K3z6NUqcdMJT0)** | **0.902349** | **0.902349**
-| ULMFit    | 0.834981  | 0.834981 |
+| model     | macro-accuracy | micro-accuracy | macro-F1       | micro-F1   |
+|-----------|----------------|----------------|----------------|------------|
+| **LinearSVC** | **0.957806**       | **0.95747712**     |       **0.869411** | **0.85116993** |
+| ULMFit    | 0.955066       | 0.84273111     | 0.852149       | 0.84273111 |
